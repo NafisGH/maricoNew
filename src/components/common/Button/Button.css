@@ -1,0 +1,30 @@
+.Primary,
+.Secondary {
+    border-radius: 15px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+    padding: 1.8px 0;
+}
+
+.Primary {
+    border: none;
+    margin-right: 26px;
+    color: white;
+    background-color: #326CF9;
+}
+
+.Secondary,
+.Third {
+    background: none;
+    border: 1px solid #707070;
+    color:  #707070;
+}
+
+.Third
+ {
+    border-radius: 15px;
+    width: 100%;
+    height: 105px;
+}
+
