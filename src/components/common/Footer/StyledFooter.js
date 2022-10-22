@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
-margin-top: 184px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+    max-width: 1641px;
+    margin: 0 auto;
+    margin-top: 184px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 96px;
+
 
 div {
 
@@ -28,22 +32,26 @@ div {
 
 div {
 
-    li:not(:nth-child(2)) {
+    a {
         font-size: 28px;
         color: #707070;
-    }
+        text-decoration: none;
 
-    li:nth-child(2) {
-        font-size: 28px;
-        color: #326DF9;
+        :hover {
+                    border-bottom: 2px solid blue;
+                 }
     }
 
     ul {
         display: flex;
-        li {
+        a {
             margin-left: 45px;
         }
     }
+}
+.active {
+    cursor: default;
+    color: #326CF9;
 }
 `
 

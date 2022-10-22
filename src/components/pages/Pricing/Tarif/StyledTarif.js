@@ -10,13 +10,6 @@ background: #131313;
 padding: 35px;
 box-sizing: border-box;
 
-
-
-
-
- 
-
-
 img {
     margin-right: 10px;
 }
@@ -128,6 +121,9 @@ Button {
     height: 160px;
 }
 
+button {
+    font-size: 27px;
+}
 
 
 `

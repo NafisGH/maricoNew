@@ -7,11 +7,13 @@ import LogoGetStartedNow from '../../../common/LogoGetStartedNow'
 export default function Main() {
   return (
     <StyledMain>
+
+    <h1>Choose the plan that's right for you.</h1>
         <ul>
-            {dataTarif.map((item, index) => {
+            {dataTarif.map((item) => {
                 return (
                     <Tarif 
-                    // key={item.id}
+                    key={item.id}
                     dataArrayPlans={item} />
                 )
              })}

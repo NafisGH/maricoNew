@@ -7,7 +7,7 @@ export default function Step2() {
     return (
         <StyledStep2>
 
-           
+           <ul>
                     <div className="one_link_box">
                         <div className="one_link_content">
                             <p className="oneGreen">One Link</p>
@@ -26,7 +26,12 @@ export default function Step2() {
                             <p className="all_yours">All Yours.</p>
                         </div>
                     </div>
-                    <Button classBtn="Primary">Get Started </Button>
+
+           </ul>
+                    <ul>
+                        <Button classBtn="Primary">Get Started </Button>
+                    </ul>
+                   
         </StyledStep2>
     );
 }

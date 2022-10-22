@@ -9,6 +9,7 @@ console.log(dataArrayPlans)
   return (
     <StyledTarif className={`${dataArrayPlans.id === 3 ? 'activeblue': ''}`}>
        
+
             
             <div>
                 <h3>{dataArrayPlans.tarif}</h3>

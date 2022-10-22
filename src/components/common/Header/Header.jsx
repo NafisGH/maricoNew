@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import StyledHeader from "./StyledHeader";
 import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
@@ -10,10 +10,22 @@ const Header = () => {
        <Logo/>
       <nav>
         <ul>
-          <li>Use Cases</li>
-          <li>About</li>
-          <li><Link to="../pricing">Pricing</Link></li>
-          <li>Blog</li>
+          <NavLink to="../use case" 
+          className={({isActive})=> isActive ? 'active' : undefined }
+          >Use Cases</NavLink>
+
+          <NavLink to="../about"
+          className={({isActive})=> isActive ? 'active' : undefined }
+          >About</NavLink>
+
+          <NavLink to="../pricing"
+          className={({isActive})=> isActive ? 'active' : undefined }
+          >Pricing</NavLink>
+
+          <NavLink to="../blog"
+          className={({isActive})=> isActive ? 'active' : undefined }
+          >Blog</NavLink>
+          
         </ul>
       </nav>
       <div>

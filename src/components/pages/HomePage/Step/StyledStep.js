@@ -25,7 +25,7 @@ justify-content: center;
     color: #707070;
     width: 929px;
     height: 90px;
-    margin: auto;
+    margin: 0 auto;
     margin-bottom: 176px;
     text-align: center;
 }

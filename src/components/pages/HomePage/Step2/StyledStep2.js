@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 const StyledStep2 = styled.div`
  max-width: 1731px ;
-
- display: flex;
-
+ 
+ ul {
+    display: flex;
+justify-content: center;
+ }
  
     .one_link_box {
     width: 854px;
@@ -55,6 +57,14 @@ img {
     font-size: 80px;
 }
 
+button {
+    margin-top: 49px;
+    width: 283px;
+    height: 74px;
+    left: 818px;
+    top: 4014px;
+    background: #326CF9;
+}
 
 `
 

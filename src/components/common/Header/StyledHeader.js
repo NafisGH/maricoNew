@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 const StyledHeader = styled.div`
 
-
     max-width: 1640px;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-
+    height: 56px;
+    margin-top: 46px;
+    margin-bottom: 128px;
      
 
     nav {
@@ -18,20 +19,18 @@ const StyledHeader = styled.div`
              align-items:center;
              height: 100%;
 
-             li:not(:last-child) {
+             a:not(:last-child) {
                 margin-right: 39px;
              }
 
-             li {
+              a {
+                font-size: 20px;
                 color: #707070;
-
-                & > a {
-                    color: #707070;
-                    text-decoration: none;
-                    :hover {
-                        background-color: #326CF9;;
-                    }
-                }
+                text-decoration: none;
+                 :hover {
+                    border-bottom: 2px solid blue;
+                 }
+                    
              }
         }
     }
@@ -56,6 +55,11 @@ const StyledHeader = styled.div`
             color: white;
         }
 
+        .active {
+            cursor: default;
+            color: #326CF9;
+            
+        }
     
 `
 
