@@ -3,11 +3,13 @@ import styled from "styled-components";
 const StyledContentSocialNetwork = styled.li`
     position: relative;
     padding: 36px 0px 17px 28px;
-
+img {
+    margin-bottom: 17px;
+}
 h3 {
     font-size: 30px;
     color: #FFFFFF;
-
+    margin-bottom: 11px;
 }
 p {
     font-size: 23px;

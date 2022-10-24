@@ -4,6 +4,7 @@ import styled from "styled-components";
 const LogoGetStartedNow = styled.div`
 display: flex;
 justify-content: center;
+margin-top: 188px;
 
 div {
     img {
