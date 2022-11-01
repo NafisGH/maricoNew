@@ -1,10 +1,13 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import StyledHeader from "./StyledHeader";
 import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const handleSignUp = () => navigate('/Sign')
+
   return (
     <StyledHeader>
        <Logo/>
@@ -30,7 +33,7 @@ const Header = () => {
       </nav>
       <div>
         <Button classBtn="login">Login</Button>
-        <Button classBtn="sign">Sign Up</Button>
+        <Button handleClick={handleSignUp} classBtn="sign">Sign Up</Button>
       </div>
     </StyledHeader>
   );

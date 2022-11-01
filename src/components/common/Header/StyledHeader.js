@@ -61,6 +61,12 @@ const StyledHeader = styled.div`
             
         }
     
+    .sign {
+        cursor: pointer;
+        :hover {
+            border-bottom: 1px solid #326CF9;
+        }
+    }
 `
 
 export default StyledHeader;
