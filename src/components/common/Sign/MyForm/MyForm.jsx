@@ -3,35 +3,31 @@ import StyledMyForm from "./StyledMyForm";
 import { Formik, Form, Field } from "formik";
 import CustomInputMyForm from "./CustomInputMyForm/CustomInputMyForm";
 import Button from '../../Button/Button'
+import { dataSign } from "../../../../utils/dataSign";
 
-export default function MyForm() {
+export default function MyForm({type}) {
   return (
     <StyledMyForm>
       <Formik
-        initialValues={{ username: "", email: "", password: "" }}
+        initialValues={dataSign[type].initialValues }
         onSubmit={() => {}}
       >
         {(formik) => {
           return (
             <Form className="form">
-              <Field 
-                name='username'
+            {dataSign[type].inputs.map((item)=> {
+              return <Field 
+                name={item.name}
                 component={CustomInputMyForm}
-                placeholder='Username'
+                placeholder={item.placeholder}
+                type={item.type}
+                key={item.id}
               />
-              <Field 
-                name='email'
-                component={CustomInputMyForm}
-                placeholder='E-mail'
-              />
-              <Field 
-                name='password'
-                component={CustomInputMyForm}
-                placeholder='Password'
-              />
+            })}
+             
 
               
-              <Button classBtn='Sign' type="summit">Sign Up</Button>
+              <Button classBtn='Sign' type="summit">{type === 'in' ? 'Log in': 'Sign Up'}</Button>
             </Form>
           );
         }}

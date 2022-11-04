@@ -6,6 +6,7 @@ import Pricing from './components/pages/Pricing';
 import Blog from './components/pages/Blog/Blog';
 import About from './components/pages/About';
 import Signup from './components/pages/Signup'
+import Login from './components/pages/Login/Login';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path='/blog' element={<Blog/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/Sign' element={<Signup/>}/>
+        <Route path='/Login' element={<Login/>}/>
       </Routes>
       
 

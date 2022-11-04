@@ -7,6 +7,7 @@ import Logo from "../Logo/Logo";
 const Header = () => {
   const navigate = useNavigate();
   const handleSignUp = () => navigate('/Sign')
+  const handleLogin = () => navigate('/Login')
 
   return (
     <StyledHeader>
@@ -32,7 +33,7 @@ const Header = () => {
         </ul>
       </nav>
       <div>
-        <Button classBtn="login">Login</Button>
+        <Button handleClick={handleLogin} classBtn="login">Login</Button>
         <Button handleClick={handleSignUp} classBtn="sign">Sign Up</Button>
       </div>
     </StyledHeader>

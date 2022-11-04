@@ -1,13 +1,13 @@
 import React from "react";
 import StyledSignup from "./StyledSignup";
 import Header from "../../common/Header";
-import MainSignup from "./MainSignup";
+import Main from "../../common/Sign/Main/Main";
 
 export default function Signup() {
   return (
     <StyledSignup>
       <Header />
-      <MainSignup type='up'/>
+      <Main type='up'/>
     </StyledSignup>
   );
 }

@@ -4,7 +4,7 @@ const StyledSocialNetwork = styled.li`
 
 display: flex;
 align-items: center;
-border: 1px solid #FFFFFF;
+border: 2px solid #FFFFFF;
 border-radius: 10px;
 padding: 22px 102px;
 
