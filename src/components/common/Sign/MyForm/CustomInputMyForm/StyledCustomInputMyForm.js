@@ -5,7 +5,22 @@ position: relative;
 margin-bottom: 80px;
 padding-bottom: 15px;
 
+.error {
+  position: absolute;
+  bottom: -40px;
+  content: '';
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 34px;
+  left: 0;
+  color: red;
+}
 
+&.error {
+  &::after {
+    background-color: red;
+  }
+}
 
   input {
     border: none;
@@ -31,7 +46,13 @@ padding-bottom: 15px;
     bottom: -2px;
     left: 0;
   }
-
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px #000 inset;
+    -webkit-text-fill-color: #88c9ce;
+  }
   
 `;
 

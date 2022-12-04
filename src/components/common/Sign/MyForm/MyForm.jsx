@@ -9,19 +9,26 @@ export default function MyForm({type}) {
   return (
     <StyledMyForm>
       <Formik
-        initialValues={dataSign[type].initialValues }
+        initialValues={dataSign[type].initialValues}
+        validationSchema={dataSign[type].validationSchema}
+        validateOnMount={true}
         onSubmit={() => {}}
       >
         {(formik) => {
           return (
-            <Form className="form">
+            <Form className="form"
+            noValidate
+            >
             {dataSign[type].inputs.map((item)=> {
               return <Field 
+                isValid={false}
                 name={item.name}
                 component={CustomInputMyForm}
                 placeholder={item.placeholder}
                 type={item.type}
                 key={item.id}
+                touched={formik.touched}
+                errors={formik.errors}
               />
             })}
              

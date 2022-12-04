@@ -1,3 +1,5 @@
+import * as Yup from "yup";
+
 export const dataSign = {
   in: {
     title: "Log in",
@@ -25,6 +27,15 @@ export const dataSign = {
         id: 2,
       },
     ],
+    validationSchema: Yup.object().shape({
+      email: Yup.string()
+        .email("Не валидная почта")
+        .required("Поле Eimail обязательно"),
+      password: Yup.string()
+        .required("Пароль обязателен")
+        .min(6, "Пароль слишком короткий")
+        .max(14, "Пароль слишком длинный"),
+    }),
   },
   up: {
     title: "Sign up",
@@ -58,5 +69,18 @@ export const dataSign = {
         id: 3,
       },
     ],
+    validationSchema: Yup.object().shape({
+      name: Yup.string()
+        .required("Имя обязательно")
+        .min(2, "Имя слишком короткое")
+        .max(14, "Имя слишком длинное"),
+      email: Yup.string()
+        .email("Не валидная почта")
+        .required("Поле Eimail обязательно"),
+      password: Yup.string()
+        .required("Пароль обязателен")
+        .min(6, "Пароль слишком короткий")
+        .max(14, "Пароль слишком длинный"),
+    }),
   },
 };

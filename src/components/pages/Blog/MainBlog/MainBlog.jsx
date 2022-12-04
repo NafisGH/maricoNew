@@ -1,7 +1,8 @@
 import React from "react";
 import StyledMainBlog from "./StyledMainBlog";
-import ContentSocialNetwork from "./ContentSocialNetwork/ContentSocialNetwork";
 import { dataBlog } from "../../../../utils/dataBlog";
+import Sliders from "../../../common/Sliders/Sliders";
+
 
 export default function MainBlog() {
   return (
@@ -11,11 +12,17 @@ export default function MainBlog() {
           <h1>Content Sources</h1>
           <p>Connect these sources to your Marico homepage.</p>
         </div>
-        <ul>
+        {/* <ul>
           {dataBlog.map((item) => {
             return <ContentSocialNetwork key={item.id} blogProps={item} />;
           })}
-        </ul>
+        </ul> */}
+        <Sliders blogProps={dataBlog}/>
+       
+
+        
+
+
       
 
       
