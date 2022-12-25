@@ -9,7 +9,7 @@ const StyledMainBlog = styled.div`
 
 
 
-    div {
+    .text {
         display: flex;
         flex-direction: column;
         align-items: center;

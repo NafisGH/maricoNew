@@ -60,6 +60,38 @@ div {
     align-self: center;
 }
 
+@media (max-width: 1085px) {
+    h2 {
+        font-size: 60px;
+        text-align: center;
+    }
+    p {
+        font-size: 35px;
+    }
+    .dotTextNumbers,
+    .dotText {
+        font-size: 22px;
+    }
+    .foto_logo {
+        width: 100px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 700px) {
+    h2 {
+        font-size: 55px;
+        text-align: center;
+    }
+    p {
+        font-size: 30px;
+    }
+    img {
+        width: 80px;
+        height: 75px;
+    }
+}
+
 
 
 

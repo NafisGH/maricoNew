@@ -3,20 +3,37 @@ import { NavLink, useNavigate } from "react-router-dom";
 import StyledHeader from "./StyledHeader";
 import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
+import { BiMenu } from "react-icons/bi"
+import { useState } from "react";
 
 const Header = () => {
   const navigate = useNavigate();
   const handleSignUp = () => navigate('/Sign')
   const handleLogin = () => navigate('/Login')
 
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleClickButtonBurger = () => {
+    setIsVisible(!isVisible)
+  }
+
   return (
     <StyledHeader>
-       <Logo/>
-      <nav>
+      <Logo />
+      <div className="burger-menu">
+        <Button onClick={handleClickButtonBurger} >
+          <BiMenu />
+        </Button>
+        <div className={`content ${isVisible ? 'active-burger-menu' : ''}`}>
+          text
+        </div>
+      </div>
+      {/* <nav>
         <ul>
           <NavLink to="../use case" 
           className={({isActive})=> isActive ? 'active' : undefined }
-          >Use Cases</NavLink>
+             >Use Cases</NavLink>
 
           <NavLink to="../about"
           className={({isActive})=> isActive ? 'active' : undefined }
@@ -35,7 +52,7 @@ const Header = () => {
       <div>
         <Button handleClick={handleLogin} classBtn="login">Login</Button>
         <Button handleClick={handleSignUp} classBtn="sign">Sign Up</Button>
-      </div>
+      </div> */}
     </StyledHeader>
   );
 }

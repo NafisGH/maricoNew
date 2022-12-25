@@ -9,7 +9,7 @@ export default function LogoGetStartedNow() {
     <StyledLogoGetStartedNow>
     <div>
       <div>
-         <img src={logo} alt="foto logo"></img>
+         <img className="foto_logo" src={logo} alt="foto logo"></img>
       </div>
     
            <h2>Get Started Now</h2>
@@ -24,8 +24,8 @@ export default function LogoGetStartedNow() {
           <img className="dot" src={img_dot} alt="dot"></img>
         </div>
         
-        <div>
-          1000+<p>creators have already started</p>
+        <div className="dotTextNumbers">
+          1000+<p className="dotText">creators have already started</p>
         </div>
       </div>
     </div>

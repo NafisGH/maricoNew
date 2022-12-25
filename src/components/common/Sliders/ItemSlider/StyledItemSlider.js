@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledItemSlider = styled.li`
   display: grid;
-  grid-template-columns: 5rem 1100px 5rem;
+  grid-template-columns: 5rem auto 5rem;
   align-items: center;
   width: 100%;
   max-width: 125.5rem;

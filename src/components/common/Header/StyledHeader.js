@@ -10,6 +10,45 @@ const StyledHeader = styled.div`
   margin-top: 46px;
   margin-bottom: 128px;
 
+  /* @media (max-width: 820px) {
+    margin: 0 25px;
+  } */
+
+  
+  .burger-menu {
+    .content {
+        height: 100vh;
+        width: 200px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(200px);
+
+        &.active-burger-menu {
+          transform: translate(0px);
+          background-color: blue;
+        }
+      }
+
+    button {
+      width: 32px;
+      height: 32px;
+      background: none;
+      border: none;
+
+        & > svg {
+          width: 100%;
+          height: 100%;
+          fill: white;
+        }
+        
+    }
+    
+  }
+
+
+
   nav {
     ul {
       display: flex;

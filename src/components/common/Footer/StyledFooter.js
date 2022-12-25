@@ -53,6 +53,8 @@ div {
     cursor: default;
     color: #326CF9;
 }
+
+
 `
 
 export default StyledFooter;
