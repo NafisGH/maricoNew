@@ -60,3 +60,31 @@
   color: #707070;
   font-size: 50px;
 }
+
+.login {
+  font-size: 20px;
+  color: #707070;
+  background: none;
+  margin-right: 24px;
+  cursor: pointer;
+}
+.login:hover {
+    border-bottom: 1px solid #326cf9;
+  }
+
+.sign {
+  background: #306ef7;
+  font-size: 20px;
+  width: 119px;
+  height: 55px;
+  border-radius: 10px;
+  border: 1px solid #306ef7;
+  color: white;
+  cursor: pointer;
+
+}
+.sign:hover {
+    opacity: 0.3;
+  }
+
+  

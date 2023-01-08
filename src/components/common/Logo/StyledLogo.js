@@ -17,7 +17,15 @@ const StyledLogo = styled.div`
             font-size: 37px;
         }
      
-
+        @media (max-width: 1024px) {
+            img {
+                width: 40px;
+                height: 37px;
+            }
+            p {
+                font-size: 28px;
+            }
+        }
 `
 
 export default StyledLogo;

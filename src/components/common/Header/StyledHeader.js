@@ -9,29 +9,29 @@ const StyledHeader = styled.div`
   height: 56px;
   margin-top: 46px;
   margin-bottom: 128px;
-
-  /* @media (max-width: 820px) {
-    margin: 0 25px;
-  } */
-
   
   .burger-menu {
     .content {
         height: 100vh;
         width: 200px;
-        background-color: red;
-        position: absolute;
+        background-color: #161414;
+        position: fixed;
         top: 0;
         right: 0;
-        transform: translate(200px);
+        transform: translateX(200px);
+        z-index: 2;
+        transition-duration: 0.5s ;
 
-        &.active-burger-menu {
-          transform: translate(0px);
-          background-color: blue;
-        }
+          &.active-burger-menu {
+            transform: translateX(0px);
+            /* background-color: #161414; */
+            width: 70vw;
+            height: 100vh;
+          }
+        
       }
 
-    button {
+     .open, .close {
       width: 32px;
       height: 32px;
       background: none;
@@ -41,31 +41,30 @@ const StyledHeader = styled.div`
           width: 100%;
           height: 100%;
           fill: white;
+          /* margin-right: 15px; */
         }
-        
-    }
     
   }
-
-
-
+    
+  }
+  
   nav {
     ul {
       display: flex;
       align-items: center;
       height: 100%;
 
-      a:not(:last-child) {
-        margin-right: 39px;
-      }
+        a:not(:last-child) {
+          margin-right: 39px;
+        }
 
       a {
         font-size: 20px;
         color: #707070;
         text-decoration: none;
-        :hover {
-          border-bottom: 2px solid blue;
-        }
+          :hover {
+            border-bottom: 2px solid blue;
+          }
       }
     }
   }
@@ -74,39 +73,75 @@ const StyledHeader = styled.div`
     padding: 12px 22px;
   }
 
-  .login {
-    font-size: 20px;
-    color: #707070;
-    background: none;
-    margin-right: 24px;
-  }
-  .sign {
-    background: #306ef7;
-    font-size: 20px;
-    width: 119px;
-    height: 55px;
-    border-radius: 10px;
-    border: 1px solid #306ef7;
-    color: white;
-  }
-
   .active {
     cursor: default;
     color: #326cf9;
   }
 
-  .login {
-    cursor: pointer;
-    :hover {
-      border-bottom: 1px solid #326cf9;
+  @media (max-width: 1024px) {
+    nav > ul > a {
+      font-size: 16px;
     }
   }
-  .sign {
-    cursor: pointer;
-    :hover {
-      opacity: 0.3;
+
+  @media (max-width: 1024px) {
+    .login,
+    .sign {
+    font-size: 15px;
+  }
+    .sign {
+      width: 90px;
+      height: 45px;
     }
   }
+  
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    & a {
+      font-size: 23px;
+    }
+  }
+  /* nav ul a {
+    margin: 0;
+  } */
+  nav ul a:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .burger-menu-logins-ignin {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+    .login {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 40px;
+    width: 150px;
+    height: 55px;
+    border-radius: 30px;
+    background-color: #707070;
+    color: #fff;
+    }
+    .sign {
+    font-size: 20px;
+    width: 150px;
+    height: 55px;
+    border-radius: 30px;
+    }
+}
+  
 `;
 
 export default StyledHeader;

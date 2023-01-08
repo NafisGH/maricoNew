@@ -38,7 +38,7 @@ ul {
         }
 }
 
-@media (max-width: 1085px) {
+@media (max-width: 1024px) {
     max-width: 500px;
     margin: 0 auto;
    
