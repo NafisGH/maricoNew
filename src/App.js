@@ -8,6 +8,9 @@ import About from './components/pages/About';
 import Signup from './components/pages/Signup'
 import Login from './components/pages/Login/Login';
 
+import ProtectedRoute from './components/common/ProtectedRoute/ProtectedRoute';
+import { Profile } from './components/pages/Profile/Profile';
+
 
 function App() {
   return (
@@ -20,6 +23,15 @@ function App() {
         <Route path='/About' element={<About/>}/>
         <Route path='/Sign' element={<Signup/>}/>
         <Route path='/Login' element={<Login/>}/>
+
+        <Route
+        path='/*'
+        element={
+          <ProtectedRoute>
+            <Profile/>
+          </ProtectedRoute>
+        }
+        />
       </Routes>
       
 

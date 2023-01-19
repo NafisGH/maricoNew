@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 
 const StyledMain = styled.div`
+padding-top: 140px;
+
   .signUp {
     display: flex;
     flex-direction: column;

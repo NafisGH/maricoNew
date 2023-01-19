@@ -7,14 +7,14 @@ export default function Footer() {
   return (
     <StyledFooter>
 
-         <div>
+         <div className='logo-footer'>
             <div>
-                <img src={Logo} alt='Logo'></img>
+                <img src={Logo} alt='logo'></img>
                 <h3>Marico</h3>
             </div>
             <p>info@marico.co</p>
           </div>
-          <div>
+          <div className='footer-nav'>
             <ul>
                 <NavLink to='about'
                 className={({isActive})=> isActive ? 'active' : undefined}

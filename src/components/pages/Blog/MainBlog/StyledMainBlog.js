@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 const StyledMainBlog = styled.div`
-
-
     max-width: 1255px;
     margin: 0 auto;
     margin-bottom: 188px;
+    padding-top: 10vh;
 
 
 

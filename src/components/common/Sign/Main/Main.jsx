@@ -5,7 +5,10 @@ import MyForm from "../MyForm/MyForm";
 import { SignSocialNetwork } from "../../../../utils/SignSocialNetwork";
 import SocialNetwork from "../SocialNetwork/SocialNetwork";
 
-export default function Main({type}) {
+export default function Main({
+  type,
+  onSubmit,
+}) {
   return (
     <StyledMain>
       <div className="signUp">
@@ -13,7 +16,10 @@ export default function Main({type}) {
         <p>{dataSign[type].subtitle}</p>
       </div>
 
-      <MyForm type={type}/>
+      <MyForm 
+        type={type}
+        onSubmit={onSubmit}
+      />
 
       <div className="orText">
         <h1>{dataSign[type].textOr}</h1>
