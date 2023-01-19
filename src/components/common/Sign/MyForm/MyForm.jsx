@@ -5,14 +5,17 @@ import CustomInputMyForm from "./CustomInputMyForm/CustomInputMyForm";
 import Button from '../../Button/Button'
 import { dataSign } from "../../../../utils/dataSign";
 
-export default function MyForm({type}) {
+export default function MyForm({
+  type,
+  onSubmit,
+}) {
   return (
     <StyledMyForm>
       <Formik
         initialValues={dataSign[type].initialValues}
         validationSchema={dataSign[type].validationSchema}
+        onSubmit={(values)=> { onSubmit(values) }}
         validateOnMount={true}
-        onSubmit={() => {}}
       >
         {(formik) => {
           return (

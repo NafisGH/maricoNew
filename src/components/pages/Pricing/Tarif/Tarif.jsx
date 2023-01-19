@@ -11,7 +11,7 @@ console.log(dataArrayPlans)
        
 
             
-            <div>
+            <div className='starer'>
                 <h3>{dataArrayPlans.tarif}</h3>
                 <p className='starerSubtitle'>{dataArrayPlans.starerSubtitle}</p>
                 <div className='wraper'>
@@ -28,7 +28,7 @@ console.log(dataArrayPlans)
                 <p className='subscribersSubtitle'>{dataArrayPlans.subscribersSubtitle}</p>
             
 
-            <div>
+            <div className='img'>
                 <h5>{dataArrayPlans.planFeature}</h5>
                 <p className='feature1'><img src={check} alt="check"/>{dataArrayPlans.feature1}</p>
                 <p className='feature2'><img src={check} alt="check"/>{dataArrayPlans.feature2}</p>

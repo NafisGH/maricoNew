@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 const StyledMainSignup = styled.div`
+
   .signUp {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 78px;
-
     h1 {
       font-size: 75px;
       line-height: 112px;

@@ -1,14 +1,26 @@
 import styled from "styled-components";
 
+
 const StyledHeader = styled.div`
-  max-width: 1640px;
+background: #111131;
+width: 100vw;
+left: 0;
+position: fixed;
+z-index: 4;
+
+
+
+.content-header {
   display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
   align-items: center;
-  height: 56px;
-  margin-top: 46px;
-  margin-bottom: 128px;
+  justify-content: space-between;
+  max-width: 1640px;
+  width: 100vw;
+  padding: 10px 0;
+  margin: 0 auto;
+
+}
+  
   
   .burger-menu {
     .content {
@@ -62,10 +74,24 @@ const StyledHeader = styled.div`
         font-size: 20px;
         color: #707070;
         text-decoration: none;
-          :hover {
-            border-bottom: 2px solid blue;
-          }
+        & {
+          position: relative;
+        }
       }
+        a::after {
+          content: '';
+          position: absolute;
+          left: 0px; 
+          bottom: -5px;
+          width: 0px;
+          height: 1.5px;
+          background-color: blue;
+          transition: width 0.35s;
+        }
+
+        a:hover:after {
+          width: 100%;
+        }
     }
   }
 
@@ -78,13 +104,33 @@ const StyledHeader = styled.div`
     color: #326cf9;
   }
 
-  @media (max-width: 1024px) {
+  // 1920 1440 1024 768 425 375 320
+
+  @media (max-width: 1440px) {
+
+    .content-header {
+      padding: 8px 0;
+    }
     nav > ul > a {
-      font-size: 16px;
+      font-size: 18px;
+    }
+    .login,
+    .sign {
+    font-size: 17px;
+  }
+    .sign {
+      width: 100px;
+      height: 55px;
     }
   }
 
   @media (max-width: 1024px) {
+    .content-header {
+      padding: 5px 0;
+    }
+    nav > ul > a {
+      font-size: 16px;
+    }
     .login,
     .sign {
     font-size: 15px;
@@ -94,6 +140,8 @@ const StyledHeader = styled.div`
       height: 45px;
     }
   }
+
+ 
   
 @media (max-width: 768px) {
   nav {
@@ -118,7 +166,7 @@ const StyledHeader = styled.div`
 }
 
 @media (max-width: 768px) {
-  .burger-menu-logins-ignin {
+  .burger-menu-login-signin {
     margin-top: 8vh;
     display: flex;
     flex-direction: column;
@@ -134,6 +182,9 @@ const StyledHeader = styled.div`
     background-color: #707070;
     color: #fff;
     }
+    .login:hover::after {
+  width: 0;
+  }
     .sign {
     font-size: 20px;
     width: 150px;

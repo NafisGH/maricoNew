@@ -32,59 +32,104 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <Logo />
+      <div className="content-header">
+        <Logo />
 
-      {isVisible ? (
-        <div className="burger-menu">
-          <Button classBtn="open" handleClick={handleClickButtonBurger}>
-            <BiMenu />
-          </Button>
-          <div
-            className={`content ${isVisibleMenu ? "active-burger-menu" : ""}`}
-          >
-            <Button classBtn="close" handleClick={handleClickButtonBurger}>
-              <AiOutlineClose />
+        {isVisible ? (
+          <div className="burger-menu">
+            <Button classBtn="open" handleClick={handleClickButtonBurger}>
+              <BiMenu />
             </Button>
-            <nav> {/* Навигация Header burger menu */}
+            <div
+              className={`content ${isVisibleMenu ? "active-burger-menu" : ""}`}
+            >
+              <Button classBtn="close" handleClick={handleClickButtonBurger}>
+                <AiOutlineClose />
+              </Button>
+              <nav> {/* Навигация Header burger menu */}
+                <ul>
+                  <NavLink
+                    to="../use case"
+                    className={({ isActive }) =>
+                      isActive ? "active" : undefined
+                    }
+                  >
+                    Use Cases
+                  </NavLink>
+
+                  <NavLink
+                    to="../about"
+                    className={({ isActive }) =>
+                      isActive ? "active" : undefined
+                    }
+                  >
+                    About
+                  </NavLink>
+
+                  <NavLink
+                    to="../pricing"
+                    className={({ isActive }) =>
+                      isActive ? "active" : undefined
+                    }
+                  >
+                    Pricing
+                  </NavLink>
+
+                  <NavLink
+                    to="../blog"
+                    className={({ isActive }) =>
+                      isActive ? "active" : undefined
+                    }
+                  >
+                    Blog
+                  </NavLink>
+                </ul>
+              </nav>
+              <div className="burger-menu-login-signin">
+                <Button handleClick={handleLogin} classBtn="login">
+                  Login
+                </Button>
+                <Button handleClick={handleSignUp} classBtn="sign">
+                  Sign Up
+                </Button>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <>
+
+            <nav> {/* Навигация Header */}
               <ul>
                 <NavLink
                   to="../use case"
-                  className={({ isActive }) =>
-                    isActive ? "active" : undefined
-                  }
+                  className={({ isActive }) => (isActive ? "active" : undefined)}
                 >
                   Use Cases
                 </NavLink>
 
                 <NavLink
                   to="../about"
-                  className={({ isActive }) =>
-                    isActive ? "active" : undefined
-                  }
+                  className={({ isActive }) => (isActive ? "active" : undefined)}
                 >
                   About
                 </NavLink>
 
                 <NavLink
                   to="../pricing"
-                  className={({ isActive }) =>
-                    isActive ? "active" : undefined
-                  }
+                  className={({ isActive }) => (isActive ? "active" : undefined)}
                 >
                   Pricing
                 </NavLink>
 
                 <NavLink
                   to="../blog"
-                  className={({ isActive }) =>
-                    isActive ? "active" : undefined
-                  }
+                  className={({ isActive }) => (isActive ? "active" : undefined)}
                 >
                   Blog
                 </NavLink>
               </ul>
             </nav>
-            <div className="burger-menu-logins-ignin">
+            <div>
               <Button handleClick={handleLogin} classBtn="login">
                 Login
               </Button>
@@ -92,52 +137,10 @@ const Header = () => {
                 Sign Up
               </Button>
             </div>
-          </div>
-        </div>
-      ) : (
-        <>
+          </>
+        )}
+      </div>
 
-          <nav> {/* Навигация Header */}
-            <ul>
-              <NavLink
-                to="../use case"
-                className={({ isActive }) => (isActive ? "active" : undefined)}
-              >
-                Use Cases
-              </NavLink>
-
-              <NavLink
-                to="../about"
-                className={({ isActive }) => (isActive ? "active" : undefined)}
-              >
-                About
-              </NavLink>
-
-              <NavLink
-                to="../pricing"
-                className={({ isActive }) => (isActive ? "active" : undefined)}
-              >
-                Pricing
-              </NavLink>
-
-              <NavLink
-                to="../blog"
-                className={({ isActive }) => (isActive ? "active" : undefined)}
-              >
-                Blog
-              </NavLink>
-            </ul>
-          </nav>
-          <div>
-            <Button handleClick={handleLogin} classBtn="login">
-              Login
-            </Button>
-            <Button handleClick={handleSignUp} classBtn="sign">
-              Sign Up
-            </Button>
-          </div>
-        </>
-      )}
     </StyledHeader>
   );
 };
